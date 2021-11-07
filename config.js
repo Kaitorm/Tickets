@@ -1,6 +1,6 @@
 module.exports = {
-    token: "",
+    token: "SUPER_SECRET_TOKEN",
     color: "480ca8",
-    ticketsCategory: "",
-    staffRole: ""
+    ticketsCategory: "CategoryId",
+    staffRole: "RoleId"
 }
