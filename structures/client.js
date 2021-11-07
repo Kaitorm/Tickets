@@ -1,12 +1,20 @@
-const { Client, Intents, Collection } = require("discord.js")
-const { readdirSync } = require("fs")
-const config = require("../config")
+const { Client, Intents, Collection } = require("discord.js");
+const {TicketManager} = require('discord-tickets');
+const { readdirSync } = require("fs");
 
 class Tickets extends Client {
     constructor(options = { intents: Object.values(Intents.FLAGS) }) {
         super(options)
         this.commands = new Collection()
-        this.config = new config()
+        this.config = require("../config");
+        this.ticketManager = new TicketManager(this, {
+            enabled: true,
+            parentId: this.config.ticketsCategory,
+            staffRole: this.config.staffRole,
+            channelTopic: true,
+            storage: '../tickets.json',
+            ticketCache: true
+        })
     }
 
     async loadEvents() {

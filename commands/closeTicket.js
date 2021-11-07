@@ -5,9 +5,14 @@ class command {
     }
 
     async execute(interaction, client) {
-        if(!interaction.channel.name.startsWith("ticket-")) return interaction.reply({ content: "You're not in a ticket.", ephemeral: true })
-        if(interaction.channel.topic !== interaction.user.id || !interaction.member.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "You haven't the permission to close this ticket.", ephemeral: true })
-        interaction.channel.delete()
+        const ticket = client.ticketManager.tickets.get(interaction.channel.id)
+        if(!ticket) return interaction.reply({ content: "You're not in a ticket.", ephemeral: true })
+        if (ticket.member.id !== interaction.user.id) {
+            if (!interaction.member.permissions.has("ADMINISTRATOR")) {
+                if (!interaction.member.roles.cache.has(client.config.staffRole)) return interaction.reply({ content: "You haven't the permission to close this ticket.", ephemeral: true })
+            }
+        }
+        await ticket.delete()
     }
 }
 
