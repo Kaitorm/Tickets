@@ -4,7 +4,7 @@ A basic Discord bot made for creating tickets easily.
 
 Please let a ⭐ if you liked the project.
 
-A question or a suggestion? Tell us here » https://discord.gg/j5E42qVWHY !
+A question or a suggestion? Tell us here » https://discord.gg/kaito-dev !
 
 ### Utilisation
 
