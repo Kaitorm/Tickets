@@ -18,7 +18,7 @@ class command {
             embeds: [{
                 title: "Tickets!",
                 description: "Click on the button below to open a ticket.",
-                footer: { text: "Made by Kaito. ❤️" },
+                footer: { text: "Made with ❤️" },
                 color: client.config.color
             }],
             components: [{

@@ -9,7 +9,7 @@ A question or a suggestion? Tell us here » https://discord.gg/j5E42qVWHY !
 ### Utilisation
 
 - Download the project & Discord.js v13.
-- Edit the token in the `config.js` file.
+- Edit the token, staff's role id and ticket's category in the `config.js` file.
 - Launch the bot.
 - Magic.
 

@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "discord-tickets": "^1.0.3",
     "discord.js": "^13.2.0"
   }
 }
