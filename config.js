@@ -1,8 +1,6 @@
-class config {
-    constructor() {
-        this.token = "TOKEN"
-        this.color = "480ca8"
-    }
+module.exports = {
+    token: "",
+    color: "480ca8",
+    ticketsCategory: "",
+    staffRole: ""
 }
-
-module.exports = config
