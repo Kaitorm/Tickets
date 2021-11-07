@@ -12,7 +12,7 @@ class Tickets extends Client {
             parentId: this.config.ticketsCategory,
             staffRole: this.config.staffRole,
             channelTopic: true,
-            storage: '../tickets.json',
+            storage: './tickets.json',
             ticketCache: true
         })
     }
